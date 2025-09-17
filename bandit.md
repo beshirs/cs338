@@ -18,8 +18,10 @@
   password: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 9-10: I used the string [file] command and found the line that was preceded with = signs
   password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
-10-11:
-  password:
+10-11: I used the base64 [filename] to get the base64 encoded string and then used base64 -d [filename] to decode the string
+  password:dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+11-12:
+  password: 
   
 
 
