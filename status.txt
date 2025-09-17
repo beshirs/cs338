@@ -1,2 +1,2 @@
 Beshir
-Kali: I don't have enough storage to download Kali on my own computer right now. I plan to use Kali ....
+Kali: I am still trying to install Kali on my own laptop right now. I plan to use Kali to naviagate through network traffic and learning various security techniques
