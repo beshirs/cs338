@@ -10,7 +10,7 @@
   password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 5-6: used the find -executable command to find files that are executable(deadend), used the find . -type f -size 1033c to find which file fit the criteria of 1033 bytes and found it in file 2. 
   password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
-6-7: 
+6-7: i used this command to find out ownership: (1st = user and 2nd = group) ls -ld. 
   password: 
 
 
