@@ -20,8 +20,8 @@
   password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 10-11: I used the base64 [filename] to get the base64 encoded string and then used base64 -d [filename] to decode the string
   password:dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
-11-12:
-  password: 
+11-12: I cat commanded the file and got a string and then I used the rot13 command, which essientially rotates each letter 13 positions in the alphabet(lower and upper case). The rot13 uses the tr command: tr 'A-Za-z' 'N-ZA-Mn-za-m' <<< '[file contents]'
+  password: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
   
 
 
