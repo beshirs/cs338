@@ -14,8 +14,10 @@
   password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 7-8:I cat commanded the data.txt file and looked for millionith
   password: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
-8-9: 
-  password: 
+8-9: I used sort to find groups of passwords and looked for outlier
+  password: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+9-10:
+  password:
   
 
 
