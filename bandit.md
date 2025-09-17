@@ -12,8 +12,10 @@
   password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 6-7: i used this command to find out ownership which was root root: (1st = user and 2nd = group) ls -ld. Then i went to root directory and used the find command to look for file with 33 bytes and got a list and looked for a file with bandit7 and cat commanded it.
   password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
-7-8:
-  password
+7-8:I cat commanded the data.txt file and looked for millionith
+  password: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+8-9: 
+  password: 
   
 
 
