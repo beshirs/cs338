@@ -14,9 +14,11 @@
   password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 7-8:I cat commanded the data.txt file and looked for millionith
   password: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
-8-9: I used sort to find groups of passwords and looked for outlier
+8-9: I used sort to find groups of passwords and then used uniq -u to find the unique. 
   password: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
-9-10:
+9-10: I used the string [file] command and found the line that was preceded with = signs
+  password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+10-11:
   password:
   
 
