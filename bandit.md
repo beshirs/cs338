@@ -10,7 +10,10 @@
   password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 5-6: used the find -executable command to find files that are executable(deadend), used the find . -type f -size 1033c to find which file fit the criteria of 1033 bytes and found it in file 2. 
   password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
-6-7: i used this command to find out ownership: (1st = user and 2nd = group) ls -ld. 
-  password: 
+6-7: i used this command to find out ownership which was root root: (1st = user and 2nd = group) ls -ld. Then i went to root directory and used the find command to look for file with 33 bytes and got a list and looked for a file with bandit7 and cat commanded it.
+  password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+7-8:
+  password
+  
 
 
