@@ -1,4 +1,4 @@
-# HoneyPot Project
+# HoneyPot Project🍯
 > **Created by Beshir Said**
 ---
 General Overview:
@@ -50,7 +50,7 @@ For my project, I will be studying Honeypots, a cybersecurity technique that inv
 ---
 
 **Security note**
-Run Cowrie in an isolated lab (VM or segmented network). Do not expose sensitive data or run on production networks.
+Run Cowrie in an isolated lab (VM). Do not expose sensitive data or run on production networks.
 
 ---
 
@@ -64,7 +64,7 @@ Run Cowrie in an isolated lab (VM or segmented network). Do not expose sensitive
    $ docker run -p 2222:2222 cowrie/cowrie:latest
    $ ssh -p 2222 root@localhost
    ```
-> **Aknowldegements** https://github.com/cowrie/cowrie?tab=readme-ov-file
+> **Acknowledgements** https://github.com/cowrie/cowrie?tab=readme-ov-file
 
 2.  On Attacker (Kali):
    ```bash
@@ -77,10 +77,13 @@ Run Cowrie in an isolated lab (VM or segmented network). Do not expose sensitive
   - ls -la
   - cat /etc/passwd
   - mkdir /tmp/i_am_here
-  - echo "topsecret" > /tmp/fake_passwords.txt
-  - wget http://example.com/somefile || true
   - exit
-> **Observe the command line on Host**
+> Observe the command line on Host
+
+---
+## Results:
+- After running the data you can see how the user who put out the honeypot can observe all activity on the server. What's intresting is that this demo is only the top of the iceberg, I only used Cowrie. Using differnt honeypots or building your own for your own purposes will yield different results. 
+
 
 ---
 ## Credits and Acknowledegments
@@ -89,4 +92,7 @@ Run Cowrie in an isolated lab (VM or segmented network). Do not expose sensitive
 - T-Pot Repository: https://github.com/telekom-security/tpotce?tab=readme-ov-file
 --- 
 
+## Extra
+- Here is a repo with a list of diverse and cool honeypots!
+  https://github.com/paralax/awesome-honeypots
 
