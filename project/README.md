@@ -1,7 +1,8 @@
 # HoneyPot Project
+> **Created by Beshir Said**
 ---
 General Overview:
-- For this project I study **honeypots** — decoy systems that attract and log attacker behavior — with a specific focus on **Cowrie**, a medium-interaction SSH/Telnet honeypot. I attempted to deploy the T-Pot multi-honeypot platform but ran into installation issues, so I used standalone Cowrie to demonstrate core honeypot capabilities. Deliverables: a technical report, reproducible demo steps, and a 6–10 minute demo video showing an attack session and the matching Cowrie logs.
+- For this project I study **honeypots** — decoy systems that attract and log attacker behavior — with a specific focus on **Cowrie**, a medium-interaction SSH/Telnet honeypot. I attempted to deploy the T-Pot multi-honeypot platform but ran into installation issues, so I used standalone Cowrie to demonstrate core honeypot capabilities. Deliverables: an informational report, reproducible demo steps, and an explantion demo video showing an attack session and the matching Cowrie logs.
 ---
 
 ## Refined project proposal
@@ -19,7 +20,7 @@ For my project, I will be studying Honeypots, a cybersecurity technique that inv
 
 ---
 
-## Technical summary 
+## Findings: 
 **What Cowrie does**
 - Emulates an SSH/Telnet shell to lure attackers.
 - Logs connection metadata (src IP, port), authentication attempts (user/pass), every typed command, and file transfer attempts.
@@ -27,11 +28,24 @@ For my project, I will be studying Honeypots, a cybersecurity technique that inv
 
 --- 
 
+**Why use Honeypots**
+-
+-
+-
+----
+
+**Ethical Considerations**
+-
+-
+-
+
+----
+
 **Environment & tools**
 - Ubuntu Server (24.04 recommended)
 - Cowrie (upstream GitHub)
-- Kali Linux (attacker VM for controlled testing)
-- Helpful tools: `jq`, `tail`, `ssh`, optional `docker`
+- Kali Linux
+- Optional: `docker`
 
 ---
 
@@ -40,32 +54,33 @@ Run Cowrie in an isolated lab (VM or segmented network). Do not expose sensitive
 
 ---
 
-## Demo plan — what to show (video friendly)
-1. **Intro (30s)** — What honeypots are (analogy: *“fake storefronts with hidden cameras”*).  
-2. **Architecture (30s)** — Simple diagram: Kali (attacker) → Ubuntu (Cowrie) with IPs/ports.  
-3. **Live demo (2–3 min)** — SSH from Kali to Cowrie and run a scripted sequence (`whoami`, `ls`, `cat /etc/passwd`, `wget`, `exit`).  
-4. **Log review (2 min)** — Tail `cowrie.json` and use `jq` to extract timestamp, src IP, username, and commands.  
-5. **Config tweak (30s)** — Quick `cowrie.cfg` demo (banner or fake filesystem).  
-6. **Conclusion (30–60s)** — What we captured, limitations, next steps (e.g., ELK ingestion, long-term collection).
 
----
+## How to run demo (Cowrie):
 
-## Demo instructions — copy/paste commands
+> **For easy asscessiblity, have both servers side by side**
+
+1. On Host (Ubuntu):
+   ``` bash
+   $ docker run -p 2222:2222 cowrie/cowrie:latest
+   $ ssh -p 2222 root@localhost
+   ```
+> **Aknowldegements** https://github.com/cowrie/cowrie?tab=readme-ov-file
+
+2.  On Attacker (Kali):
+   ```bash
+   ssh -p 2222 root@<ip_address>
+  ```
 > **Assume** Cowrie listens on port `2222` at `192.168.64.3`. Adjust as needed.
 
-**On attacker (Kali)**
-```bash
-ssh -p 2222 root@192.168.64.3
-
-# demo commands (type while recording)
-whoami
-ls -la
-cat /etc/passwd
-mkdir /tmp/i_am_here
-echo "topsecret" > /tmp/fake_passwords.txt
-wget http://example.com/somefile || true
-exit
-```
+3. Run some demo commands you can try:
+  - whoami
+  - ls -la
+  - cat /etc/passwd
+  - mkdir /tmp/i_am_here
+  - echo "topsecret" > /tmp/fake_passwords.txt
+  - wget http://example.com/somefile || true
+  - exit
+> **Observe the command line on Host**
 
 ---
 ## Credits and Acknowledegments
