@@ -65,5 +65,13 @@ mkdir /tmp/i_am_here
 echo "topsecret" > /tmp/fake_passwords.txt
 wget http://example.com/somefile || true
 exit
+```
+
+---
+## Credits and Acknowledegments
+- Credit to these repo for easy and digestable instructions
+- Cowrie Repository: https://github.com/cowrie/cowrie?tab=readme-ov-file
+- T-Pot Repository: https://github.com/telekom-security/tpotce?tab=readme-ov-file
+--- 
 
 
