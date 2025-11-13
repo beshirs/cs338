@@ -71,7 +71,7 @@ Run Cowrie in an isolated lab (VM). Do not expose sensitive data or run on produ
    ```bash
    ssh -p 2222 root@<ip_address>
   ```
-> **Assume** Cowrie listens on port `2222` at `192.168.64.3`. Adjust as needed.
+> **Assume** Cowrie listens on port `2222` at <ipaddress>. Adjust as needed.
 
 4. Run some demo commands you can try:
   - whoami
@@ -89,7 +89,7 @@ Run Cowrie in an isolated lab (VM). Do not expose sensitive data or run on produ
 
 ---
 ## Credits and Acknowledegments
-- Credit to these repo for easy and digestable instructions
+Thank the open-source security community for making honeypot research accessible and well-documented. Also credit to these repo for easy and digestable instructions:
 - Cowrie Repository: https://github.com/cowrie/cowrie?tab=readme-ov-file
 - T-Pot Repository: https://github.com/telekom-security/tpotce?tab=readme-ov-file
 --- 
