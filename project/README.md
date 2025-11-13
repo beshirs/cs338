@@ -29,15 +29,15 @@ For my project, I will be studying Honeypots, a cybersecurity technique that inv
 --- 
 
 **Why use Honeypots**
--
--
--
-----
+- They help defenders observe **real attacker behavior** in a safe, controlled environment.  
+- They collect valuable intelligence such as **password attempts, command patterns, malware samples, and scanning activity**.  
+- They allow proactive defense by revealing **which tools, techniques, and vulnerabilities attackers try to exploit**.
+---
 
 **Ethical Considerations**
--
--
--
+- Honeypots must be deployed in an VM so attackers cannot pivot into real machines.  
+- They should not collect unnecessary personal data to avoid legal or ethical issues.  
+- All testing in this project was done on **closed, self-controlled systems (Ubuntu + Kali), ensuring no real users or networks were affected.
 
 ----
 
@@ -45,7 +45,7 @@ For my project, I will be studying Honeypots, a cybersecurity technique that inv
 - Ubuntu Server (24.04 recommended)
 - Cowrie (upstream GitHub)
 - Kali Linux
-- Optional: `docker`
+- Docker
 
 ---
 
@@ -54,35 +54,37 @@ Run Cowrie in an isolated lab (VM). Do not expose sensitive data or run on produ
 
 ---
 
-
-## How to run demo (Cowrie):
+## How to reproduce demo (Cowrie):
 
 > **For easy asscessiblity, have both servers side by side**
 
-1. On Host (Ubuntu):
+1. Install Docker on Ubuntu
+
+2. On Host (Ubuntu):
    ``` bash
    $ docker run -p 2222:2222 cowrie/cowrie:latest
    $ ssh -p 2222 root@localhost
    ```
 > **Acknowledgements** https://github.com/cowrie/cowrie?tab=readme-ov-file
 
-2.  On Attacker (Kali):
+3.  On Attacker (Kali):
    ```bash
    ssh -p 2222 root@<ip_address>
   ```
 > **Assume** Cowrie listens on port `2222` at `192.168.64.3`. Adjust as needed.
 
-3. Run some demo commands you can try:
+4. Run some demo commands you can try:
   - whoami
   - ls -la
   - cat /etc/passwd
   - mkdir /tmp/i_am_here
   - exit
-> Observe the command line on Host
+  - etc
+> Observe logs on Host
 
 ---
-## Results:
-- After running the data you can see how the user who put out the honeypot can observe all activity on the server. What's intresting is that this demo is only the top of the iceberg, I only used Cowrie. Using differnt honeypots or building your own for your own purposes will yield different results. 
+## Reflection:
+- After running the data you can see how the user who put out the honeypot can observe all activity on the server. What's intresting is that this demo is only the top of the iceberg, I only used Cowrie. Using differnt honeypots or building your own for your own purposes will yield different results. Working with Cowrie also gave me hands-on insight into how attackers behave once they gain shell access. Even a simple honeypot reveals patterns like reconnaissance commands, file inspection, and probing for weak points. This project showed me how valuable honeypots can be for proactive defense, and how even small setups can produce meaningful security data.
 
 
 ---
