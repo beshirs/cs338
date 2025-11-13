@@ -50,7 +50,7 @@ For my project, I will be studying Honeypots, a cybersecurity technique that inv
 ---
 
 **Security note**
-Run Cowrie in an isolated lab (VM). Do not expose sensitive data or run on production networks.
+Run Cowrie in an VM server. Do not expose sensitive data or run on production networks.
 
 ---
 
